@@ -9,6 +9,7 @@ O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua a
 # Classificação
 O resultado é comparado com uma tabela que indica o grau de obesidade do indivíduo:[1]
 
-|IMC|Classificação|
-|<16|Magreza grave|
-|16 a 17|Magresa moderada|
+|  IMC  |   Classificação  |
+|-------|:----------------:|
+|  <16  |   Magreza grave  |
+
