@@ -209,6 +209,59 @@ input {
   .test-form .field:first-child {
     margin-top: 0; }
 
+.filter-wrapper {
+  border: 1px solid #535756;
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  width: 100%; }
+  .filter-wrapper .filter {
+    display: table-cell;
+    width: 50%; }
+
+.filter {
+  background: transparent;
+  border: none;
+  color: #535756;
+  cursor: pointer;
+  height: 30px;
+  line-height: 28px;
+  text-transform: uppercase; }
+  .filter.filter-active {
+    background: #e97c12;
+    color: #fff; }
+
+.table-results table {
+  width: 100%; }
+.table-results thead {
+  background: #161621;
+  color: #535756;
+  font-size: 0.85714em;
+  text-transform: uppercase; }
+.table-results th,
+.table-results td {
+  border-bottom: 1px solid rgba(83, 87, 86, 0.5);
+  padding: 12px 15px;
+  text-align: center; }
+  .table-results th:last-child,
+  .table-results td:last-child {
+    text-align: left; }
+.table-results i {
+  font-size: 25px; }
+.table-results .icon-smiling {
+  color: #00e129; }
+.table-results .icon-sad {
+  color: #ff5656; }
+.table-results .table-results-data,
+.table-results .table-results-time {
+  display: inline-block;
+  opacity: .5;
+  width: 45%; }
+
+.table-results-imc {
+  font-size: 1.78571em;
+  font-weight: bold; }
+
 .home {
   position: relative; }
   .home .branding,

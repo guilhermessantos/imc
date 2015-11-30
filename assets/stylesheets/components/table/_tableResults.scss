@@ -1,0 +1,48 @@
+.table-results {
+	
+	table {
+		width: 100%;
+	}
+
+	thead {
+		background: $colorPrimary;
+		color: $colorDetail;
+		font-size: em($fontSizeMedium);
+		text-transform: uppercase;
+	}
+
+	th,
+	td {
+		border-bottom: 1px solid rgba($colorDetail, .5);
+		padding: 12px 15px;
+		text-align: center;
+
+		&:last-child {
+			text-align: left;
+		}
+	}
+
+	i {
+		font-size: 25px;
+	}
+
+	.icon-smiling {
+		color: $colorSucess;
+	}
+
+	.icon-sad {
+		color: $colorError;
+	}
+
+	.table-results-data,
+	.table-results-time {
+		display: inline-block;
+		opacity: .5;
+		width: 45%;
+	}
+}
+
+.table-results-imc {
+	font-size: em($fontSizeXLarge);
+	font-weight: bold;
+}

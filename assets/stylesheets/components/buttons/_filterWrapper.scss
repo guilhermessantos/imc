@@ -1,0 +1,27 @@
+.filter-wrapper {
+	border: 1px solid $colorDetail;
+	border-radius: $borderRadius;
+	display: table;
+	overflow: hidden;
+	width: 100%;
+
+	.filter {
+		display: table-cell;
+		width: 50%;
+	}
+}
+
+.filter {
+	background: transparent;
+	border: none;
+	color: $colorDetail;
+	cursor: pointer;
+	height: 30px;
+	line-height: 28px;
+	text-transform: uppercase;
+
+	&.filter-active {
+		background: $colorSecondary;
+		color: $colorText;
+	}
+}
