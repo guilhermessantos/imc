@@ -1,0 +1,34 @@
+.home {
+	position: relative;
+
+	.branding,
+	.btn-test,
+	#footer {
+		left: 50%;
+		position: absolute;
+	}
+
+	.branding,
+	#footer {
+		-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
+	}
+
+	.branding {
+		top: 20px;
+	}	
+
+	.btn-test {
+		top: 50%;
+		-webkit-transform: translateY(-50%) translateX(-50%);	
+			-ms-transform: translateY(-50%) translateX(-50%);	
+				transform: translateY(-50%) translateX(-50%);	
+	}
+
+	#footer {
+		bottom: 20px;
+		text-align: center;
+		width: 80%;		
+	}
+}

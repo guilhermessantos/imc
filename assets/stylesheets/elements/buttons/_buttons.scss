@@ -1,0 +1,40 @@
+%btn {
+	color: $colorText;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btn-test {
+	@extend %btn;
+	border: 3px solid $colorSecondary;
+	border-radius: 100%;
+	display: block;
+	font-size: $fontSizeLarge;
+	font-weight: bold;
+	height: 150px;
+	line-height: 150px;
+	width: 150px;
+}
+
+.buttons-main .button-main {
+	float: left;
+	width: 33.33%;
+}
+
+.button-main {
+	color: $colorDetail;
+	font-size: em($fontSizeSmall);
+	overflow: hidden;
+	text-transform: uppercase;
+
+	i {
+		border: 1px solid $colorDetail;
+		border-radius: 100%;
+		display: block;
+		height: 50px;
+		font-size: em($fontSizeLarge, $fontSizeSmall);
+		line-height: 50px;
+		margin: 0 auto 10px;
+		width: 50px;
+	}
+}

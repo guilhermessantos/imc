@@ -1,0 +1,19 @@
+.branding {
+	display: block;
+	width: 100px;
+}
+
+.background-one {
+	background: $colorPrimary url("assets/images/background-01.png") no-repeat center;
+	background-size: cover;
+}
+
+.wrapper {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.container {
+	padding-left: 55px;
+	padding-right: 55px;
+}

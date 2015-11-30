@@ -1,0 +1,38 @@
+#header {
+	background: $colorPrimary;
+	border-bottom: 1px solid rgba($colorDetail, .5);
+	color: $colorDetail;
+	display: table;
+	height: 45px;
+	margin-bottom: $colMargin;
+	position: relative;	
+	text-align: center;
+	width: 100%;
+
+	.header-title {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.btn-header {
+		cursor: pointer;
+		display: block;
+		height: 45px;
+		line-height: 45px;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 45px;
+	}
+
+	.back {
+		color: $colorDetail;
+		left: 0;
+		right: auto;
+	}
+}
+
+.header-title {
+	text-transform: uppercase;
+}
