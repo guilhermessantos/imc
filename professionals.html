@@ -2,16 +2,18 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Índice de massa corporal</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body class="background-one hidden">
 	<div class="wrapper">
-		<header class="header">
-			<a href="#" class="btn-header back">
-				<i class="icon"></i>
+		<header id="header">
+			<a href="index.html" class="btn-header back">
+				<i class="icon-back"></i>
 			</a>
-			<h1 class="header-title">Profissionais</h1>
+			<h1 class="header-title">Resultados</h1>
 			<button class="btn-header">
 				btn
 			</button>
@@ -22,15 +24,29 @@
 				<div class="filter-wrapper">
 					<button class="filter filter-active">Academias</button>
 					<button class="filter">Nutricionistas</button>
-				</div>				
-				<p>Informe seus dados abaixo para efetuar a avaliação</p>
-			</div>	
+				</div>
+			</div>
 
-			<div class="map-wrapper">
-				maps
+			<div class="info">
+				<p>Informe seus dados abaixo para efetuar a avaliação</p>
 			</div>
 		</div>
-	</div>
-	
+
+		<div class="map-wrapper">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120806.24304171895!2d-42.00491753372199!3d-18.878424259200653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb1a7947c2e06c7%3A0x76454399f628aa6f!2sGov.+Valadares%2C+MG!5e0!3m2!1spt-BR!2sbr!4v1448967493766" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>	
+
+	<script src="assets/javascripts/jquery.js"></script>
+	<script>
+		var hidden = jQuery( ".hidden" );
+
+		if ( hidden.length ) {
+			var heightWindow = jQuery( window ).height();
+			hidden.find( ".wrapper" ).css( "height", heightWindow );
+
+			console.log( heightWindow );
+		}
+	</script>
 </body>
 </html>

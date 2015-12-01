@@ -42,6 +42,11 @@ button,
 input {
   outline: none; }
 
+input[type="submit"],
+button {
+  -webkit-appearance: value;
+  appearance: value; }
+
 a {
   text-decoration: none; }
 
@@ -154,16 +159,18 @@ input {
   width: 100px; }
 
 .background-one {
-  background: #161621 url("assets/images/background-01.png") no-repeat center;
+  background: #161621 url("assets/images/background-01.png") no-repeat center top;
   background-size: cover; }
 
 .wrapper {
   height: 100%;
   overflow-x: hidden; }
+  .hidden .wrapper {
+    overflow: hidden; }
 
 .container {
-  padding-left: 55px;
-  padding-right: 55px; }
+  padding-left: 40px;
+  padding-right: 40px; }
 
 #header {
   background: #161621;
@@ -224,6 +231,7 @@ input {
   border: none;
   color: #535756;
   cursor: pointer;
+  font-size: 0.85714em;
   height: 30px;
   line-height: 28px;
   text-transform: uppercase; }

@@ -49,6 +49,12 @@ input {
 	outline: none;
 }
 
+input[type="submit"],
+button {
+	-webkit-appearance: value;
+			appearance: value;
+}
+
 a {
 	text-decoration: none;
 }

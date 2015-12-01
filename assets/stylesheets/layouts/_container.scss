@@ -4,16 +4,20 @@
 }
 
 .background-one {
-	background: $colorPrimary url("assets/images/background-01.png") no-repeat center;
+	background: $colorPrimary url("assets/images/background-01.png") no-repeat center top;
 	background-size: cover;
 }
 
 .wrapper {
 	height: 100%;
 	overflow-x: hidden;
+
+	.hidden & {
+		overflow: hidden;
+	}
 }
 
 .container {
-	padding-left: 55px;
-	padding-right: 55px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
