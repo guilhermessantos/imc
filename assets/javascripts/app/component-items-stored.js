@@ -12,7 +12,7 @@ Module( 'IMC.Components.ItemsStored', function(ItemsStored) {
 	};
 
 	ItemsStored.fn.getItem = function() {
-		var response = IMC.LocalStorage.getItem( 'victorfreitas' );
+		var response = IMC.LocalStorage.getItem( localStorage.getItem( 'imcUserIp' ) );
 		this.results.after( this.render( jQuery.makeArray( response ) ) );
 	};
 

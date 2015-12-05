@@ -23,17 +23,34 @@
 				<p>Informe seus dados abaixo para efetuar a avaliação</p>
 			</div>
 
-			<div class="test-form">
+			<div class="test-form" data-component="test-submit">
 				<form action="result-test.html">
 					<ul>
-						<li class="field"><input type="text" placeholder="Nome"></li>
-						<li class="field"><input type="text" placeholder="Peso"></li>
-						<li class="field"><input type="text" placeholder="Altura"></li>
-						<li class="field"><input type="submit" value="Calcular" class="btn-r"></li>
+						<li class="field">
+							<input name="name" placeholder="Nome">
+						</li>
+						<li class="field">
+							<input name="weight"
+							       data-element="mask"
+							       maxlength="6"
+							       placeholder="Peso"
+							       required>
+						</li>
+						<li class="field">
+							<input name="height"
+							       data-element="mask"
+							       maxlength="5"
+							       placeholder="Altura"
+							       required>
+						</li>
+						<li class="field">
+							<input type="submit" value="Calcular" class="btn-r">
+						</li>
 					</ul>
 				</form>
 			</div>
 		</div>
-	</div>	
+	</div>
+	<script src="assets/javascripts/built.js"></script>
 </body>
 </html>

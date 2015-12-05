@@ -1,28 +1,21 @@
 Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 
 	TestSubmit.fn.initialize = function(container) {
-		this.form      = container.find( 'form' );
-		this.inputName = container.find( 'input[name="name"]' );
-		this.results   = {};
+		this.form    = container.find( 'form' );
+		this.results = {};
 		this.addEventListener();
 	};
 
 	TestSubmit.fn.addEventListener = function() {
-		this.inputName.val(
-			document.cookie.replace(/(?:(?:^|.*;\s*)imcUser\s*\=\s*([^;]*).*$)|^.*$/, "$1")
-		);
 		this.form.on( 'submit', this._onSubmit.bind( this ) );
 	};
 
 	TestSubmit.fn._onSubmit = function(event) {
-		event.preventDefault();
-
 		var value           = this.form.serializeObject();
 		this.results.name   = value.name;
 		this.results.weight = parseFloat( value.weight.replace( ',', '.' ) );
 		this.results.height = parseFloat( value.height.replace( ',', '.' ) );
 		this.results.ip     = localStorage.getItem( 'imcUserIp' );
-		document.cookie     = 'imcUser=' + value.name;
 		this.checkResults();
 	};
 
@@ -65,7 +58,7 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 
 		this.results.imc  = imc.toPrecision( 4 );
 		this.results.date = IMC.Utils.getFormatedDate();
-
+		localStorage.setItem( 'imcValue', imc.toPrecision( 4 ) );
 		this.storeResult();
 	};
 

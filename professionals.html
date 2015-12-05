@@ -8,7 +8,7 @@
 </head>
 
 <body class="background-one hidden">
-	<div class="wrapper">
+	<div class="wrapper" data-component="canvas-map">
 		<header id="header">
 			<a href="index.html" class="btn-header back">
 				<i class="icon-back"></i>
@@ -22,31 +22,15 @@
 		<div class="container">
 			<div class="info">
 				<div class="filter-wrapper">
-					<button class="filter filter-active">Academias</button>
-					<button class="filter">Nutricionistas</button>
+					<button class="filter filter-active" data-action="keywords">Academias</button>
+					<button class="filter" data-action="keywords">Nutricionistas</button>
 				</div>
 			</div>
-
-			<div class="info">
-				<p>Informe seus dados abaixo para efetuar a avaliação</p>
-			</div>
 		</div>
-
 		<div class="map-wrapper">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7550.485603295888!2d-41.9454469!3d-18.855059699999998!3m2!1i1024!2i768!4f13.1!2m1!1snutricionistas!5e0!3m2!1sen!2sbr!4v1449105017444" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe src="" data-element="maps-embed" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
-	</div>	
-
+	</div>
 	<script src="assets/javascripts/built.js"></script>
-	<script>
-		var hidden = jQuery( ".hidden" );
-
-		if ( hidden.length ) {
-			var heightWindow = jQuery( window ).height();
-			hidden.find( ".wrapper" ).css( "height", heightWindow );
-
-			console.log( heightWindow );
-		}
-	</script>
 </body>
 </html>

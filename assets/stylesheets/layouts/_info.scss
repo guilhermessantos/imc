@@ -8,14 +8,18 @@
 	margin-bottom: 10px;
 	text-align: center;
 
-	.icon-smiling {
+	i {
+		display: inline-block;
+		font-size: 50px;
 		margin-bottom: 10px;
 	}
 
 	.icon-smiling {
 		color: $colorSucess;
-		display: inline-block;
-		font-size: 50px;
+	}
+
+	.icon-sad {
+		color: $colorError;
 	}
 }
 
