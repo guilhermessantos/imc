@@ -39,6 +39,11 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 a,
 button,
+input[type="submit"] {
+  cursor: pointer; }
+
+a,
+button,
 input {
   outline: none; }
 
@@ -46,6 +51,12 @@ input[type="submit"],
 button {
   -webkit-appearance: value;
   appearance: value; }
+
+:focus {
+  outline: none; }
+
+::-moz-focus-inner {
+  border: 0; }
 
 a {
   text-decoration: none; }
@@ -143,7 +154,7 @@ body {
   content: "\e905"; }
 
 .icon-smiling:before {
-  content: "\e906"; }
+  content: "\e906"; } 
 
 input {
   background: #535756;
@@ -208,8 +219,42 @@ input {
   line-height: 1.4;
   margin-bottom: 30px; }
 
+.result-test-info {
+  margin-bottom: 10px;
+  text-align: center; }
+  .result-test-info .icon-smiling {
+    margin-bottom: 10px; }
+  .result-test-info .icon-smiling {
+    color: #00e129;
+    display: inline-block;
+    font-size: 50px; }
+
+.imc {
+  display: inline-block;
+  font-size: 40px;
+  padding: 0 20px;
+  position: relative; }
+  .imc:before, .imc:after {
+    background: #535756;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%; }
+  .imc:before {
+    left: 100%; }
+  .imc:after {
+    right: 100%; }
+
 .the-content {
   line-height: 1.4; }
+
+.info-featured {
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  padding: 20px;
+  text-align: center; }
 
 .test-form .field {
   margin-top: 20px; }

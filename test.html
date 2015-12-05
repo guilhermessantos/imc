@@ -23,38 +23,17 @@
 				<p>Informe seus dados abaixo para efetuar a avaliação</p>
 			</div>
 
-			<div class="test-form" data-component="test-submit">
-				<form>
+			<div class="test-form">
+				<form action="result-test.html">
 					<ul>
-						<li class="field">
-							<input name="name" placeholder="Nome">
-						</li>
-						<li class="field">
-							<input name="weight"
-							       data-element="mask"
-							       placeholder="00,00"
-							       minlength="1"
-							       maxlength="6"
-							       required>
-						</li>
-						<li class="field">
-							<input name="height"
-							       data-element="mask"
-							       placeholder="0,00"
-							       minlength="1"
-							       maxlength="5"
-							       required>
-						</li>
-						<li class="field">
-							<input type="submit" value="Calcular" class="btn-r">
-						</li>
+						<li class="field"><input type="text" placeholder="Nome"></li>
+						<li class="field"><input type="text" placeholder="Peso"></li>
+						<li class="field"><input type="text" placeholder="Altura"></li>
+						<li class="field"><input type="submit" value="Calcular" class="btn-r"></li>
 					</ul>
 				</form>
 			</div>
 		</div>
-	</div>
-	<script src="assets/javascripts/built.js"></script>
-	<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7gIIsPJUF2SAHt_xsUMRAZmvPXcNzEl0"></script-->
-	<div id="map-canvas"></div>
+	</div>	
 </body>
 </html>

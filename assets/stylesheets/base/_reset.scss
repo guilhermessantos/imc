@@ -45,6 +45,12 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 a,
 button,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+a,
+button,
 input {
 	outline: none;
 }
@@ -53,6 +59,14 @@ input[type="submit"],
 button {
 	-webkit-appearance: value;
 			appearance: value;
+}
+
+:focus { 
+	outline:none;
+}
+
+::-moz-focus-inner {
+	border:0;
 }
 
 a {
