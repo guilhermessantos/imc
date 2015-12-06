@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body class="background-one">
-	<div class="wrapper">
+	<div class="wrapper" data-component="items-stored">
 		<header id="header">
 			<a href="index.html" class="btn-header back">
 				<i class="icon-back"></i>
@@ -21,13 +21,13 @@
 		<div class="container">
 			<div class="info">
 				<div class="filter-wrapper">
-					<button class="filter filter-active">Recente</button>
-					<button class="filter">Antigo</button>
+					<button class="filter filter-active" data-action="filter">Recente</button>
+					<button class="filter" data-action="filter">Antigo</button>
 				</div>
 			</div>
 		</div>
 
-		<div class="table-results" data-component="items-stored">
+		<div class="table-results">
 			<table>
 				<thead>
 					<tr>
@@ -36,6 +36,8 @@
 						<th>Nome</th>
 					</tr>
 				</thead>
+				<tbody>
+				</tbody>
 			</table>
 		</div>
 	</div>
