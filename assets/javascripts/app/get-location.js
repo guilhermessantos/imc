@@ -5,7 +5,12 @@ Module( 'IMC.GetLocation', function(GetLocation) {
 	};
 
 	GetLocation.coordinates = function() {
-		navigator.geolocation.getCurrentPosition(this.success, this.error);
+		var options = {
+			enableHighAccuracy : true,
+			maximumAge         : 0
+		};
+
+		navigator.geolocation.getCurrentPosition( this.success, this.error, options );
 	};
 
 	GetLocation.success = function(position) {
@@ -15,8 +20,8 @@ Module( 'IMC.GetLocation', function(GetLocation) {
 		});
 	};
 
-	GetLocation.error = function(error) {
-		console.warn( 'Error(' + error.code + '): ' + error.message );
+	GetLocation.error = function(err) {
+		 console.warn('ERROR(' + err.code + '): ' + err.message);
 	};
 
 }, {} );

@@ -5,6 +5,21 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Índice de massa corporal</title>
 	<link rel="stylesheet" href="style.css">
+    <style>
+      .canvas-map {
+      	width: 100%;
+        height: 600px;
+      }
+      .place-name {
+		font-weight: bold;
+		font-size: 16px;
+		font-family: Arial;
+		padding: 5px 0;
+      }
+      .place-results{
+		color: #121212;
+      }
+    </style>
 </head>
 
 <body class="background-one hidden">
@@ -27,10 +42,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="map-wrapper">
-			<iframe src="" data-element="maps-embed" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div class="map-wrapper" data-page="professionals">
+			<div data-element="canvas" class="canvas-map"></div>
 		</div>
 	</div>
 	<script src="assets/javascripts/built.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7gIIsPJUF2SAHt_xsUMRAZmvPXcNzEl0&signed_in=true&libraries=places&callback=IMC.CanvasMap.create" async defer></script>
 </body>
 </html>

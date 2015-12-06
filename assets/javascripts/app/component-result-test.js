@@ -17,17 +17,21 @@ Module( 'IMC.Components.ResultTest', function(ResultTest) {
 		this.imcText     = container.find( '.imc' );
 		this.congrats    = container.find( '.congrats' );
 		this.congratsMsg = container.find( '.congrats-msg span' );
-		this.imc         = localStorage.getItem( 'imcValue' );
+		this.imc         = IMC.LocalStorage.imc();
+		this.url         = container.data( 'action-test' );
 		this.init();
 
 	};
 
 	ResultTest.fn.init = function() {
-		if( this.imc < 18.5 ) {
+		if( null == this.imc ) {
+			this.locationTest();
+			return;
+		} else if( this.imc < 18.5 ) {
 			this.underWeight();
 		} else if( this.imc < 25 ) {
 			this.defaultWeight();
-		}else if( this.imc >= 25 ) {
+		} else if( this.imc >= 25 ) {
 			this.overWeight();
 		}
 
@@ -54,4 +58,9 @@ Module( 'IMC.Components.ResultTest', function(ResultTest) {
 		this.congrats.text( CONGRATS_SAD );
 		this.congratsMsg.text( CONGRATS_NUTRI );
 	};
+
+	ResultTest.fn.locationTest = function() {
+		window.location.href = this.url;
+	};
+
 });

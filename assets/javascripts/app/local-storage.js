@@ -1,7 +1,7 @@
 Module( 'IMC.LocalStorage', function(LocalStorage) {
 
 	LocalStorage.setItems = function(response) {
-		var keyName = response.ip
+		var keyName = 'imcSaveResults'
 		  , items   = this.getItem( keyName )
 		  , data    = [response]
 		;
@@ -32,6 +32,22 @@ Module( 'IMC.LocalStorage', function(LocalStorage) {
 
 	LocalStorage.clear = function() {
 		return localStorage.clear();
+	};
+
+	LocalStorage.keywords = function() {
+		return localStorage.getItem( 'imcKeywords' );
+	};
+
+	LocalStorage.position = function() {
+		return this.getItem( 'userCords' );
+	};
+
+	LocalStorage.imc = function() {
+		return localStorage.getItem( 'imcValue' );
+	};
+
+	LocalStorage.testResults = function() {
+		return this.getItem( 'imcSaveResults' );
 	};
 
 }, {} );

@@ -2,6 +2,7 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 
 	TestSubmit.fn.initialize = function(container) {
 		this.form    = container.find( 'form' );
+		this.url     = this.form.data( 'action' );
 		this.results = {};
 		this.addEventListener();
 	};
@@ -11,11 +12,12 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 	};
 
 	TestSubmit.fn._onSubmit = function(event) {
-		var value           = this.form.serializeObject();
-		this.results.name   = value.name;
-		this.results.weight = parseFloat( value.weight.replace( ',', '.' ) );
-		this.results.height = parseFloat( value.height.replace( ',', '.' ) );
-		this.results.ip     = localStorage.getItem( 'imcUserIp' );
+		event.preventDefault();
+		var value            = this.form.serializeObject();
+		this.results.name    = value.name;
+		this.results.weight  = parseFloat( value.weight.replace( ',', '.' ) );
+		this.results.height  = parseFloat( value.height.replace( ',', '.' ) );
+		this.results.smiling = 'sad';
 		this.checkResults();
 	};
 
@@ -42,6 +44,7 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 		} else if( imc < 25 ) {
 			this.results.classification = 'Saudável';
 			this.results.search         = 'academias';
+			this.results.smiling        = 'smiling';
 		} else if( imc < 30 ) {
 			this.results.classification = 'Sobrepeso';
 			this.results.search         = 'nutricionistas';
@@ -56,14 +59,17 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 			this.results.search         = 'nutricionistas';
 		}
 
-		this.results.imc  = imc.toPrecision( 4 );
-		this.results.date = IMC.Utils.getFormatedDate();
-		localStorage.setItem( 'imcValue', imc.toPrecision( 4 ) );
-		this.storeResult();
+		this.storeResult( imc.toPrecision( 4 ) );
 	};
 
-	TestSubmit.fn.storeResult = function() {
+	TestSubmit.fn.storeResult = function(imc) {
+		this.results.imc  = imc;
+		this.results.date = IMC.Utils.getFormatedDate();
+		this.results.time = IMC.Utils.getTime();
+		localStorage.setItem( 'imcKeywords', this.results.search );
+		localStorage.setItem( 'imcValue', imc );
 		IMC.LocalStorage.setItems( this.results );
+		window.location.href = this.url;
 	};
 
 });

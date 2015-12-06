@@ -12,6 +12,10 @@
 		return this.find( '[data-action="' + name + '"]' );
 	};
 
+	$.prototype.byComponent = function(name) {
+		return this.find( '[data-component="' + name + '"]' );
+	};
+
 	$.prototype.isExist = function(selector, callback) {
 		var element = this.find( selector );
 
