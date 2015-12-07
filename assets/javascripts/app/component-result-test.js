@@ -1,14 +1,14 @@
 Module( 'IMC.Components.ResultTest', function(ResultTest) {
 
-	var DEFAULT_WEIGHT = 'Parabéns! Você esta na media certa! Confira seu IMC Abaixo'
-	  , UNDER_WEIGHT   = 'Opss! Você abaixo de seu peso ideal! Confira seu IMC Abaixo'
-	  , OVER_WEIGHT    = 'Opss! Você esta acima do seu peso ideal! Confira seu IMC Abaixo'
+	var DEFAULT_WEIGHT = 'Parabéns, você está na medida certa! Confira seu IMC Abaixo.'
+	  , UNDER_WEIGHT   = 'Opss, você abaixo de seu peso ideal! Confira seu IMC Abaixo.'
+	  , OVER_WEIGHT    = 'Opss, você está acima do seu peso ideal! Confira seu IMC Abaixo'
 	  , ICON_HAPPY     = 'icon-smiling'
 	  , ICON_SAD       = 'icon-sad'
 	  , CONGRATS       = 'Continue assim!'
-	  , CONGRATS_SAD   = 'Sua saúde não está em dia'
-	  , CONGRATS_ACAD  = 'algumas academias mais perto de você'
-	  , CONGRATS_NUTRI = 'alguns nutricionistas mais perto de você'
+	  , CONGRATS_SAD   = 'Sua saúde não está em dia.'
+	  , CONGRATS_ACAD  = 'algumas academias mais perto de você.'
+	  , CONGRATS_NUTRI = 'alguns nutricionistas mais perto de você.'
 	;
 
 	ResultTest.fn.initialize = function(container) {
