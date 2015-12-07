@@ -18,13 +18,13 @@ Module( 'IMC.Components.ResultTest', function(ResultTest) {
 		this.congrats    = container.find( '.congrats' );
 		this.congratsMsg = container.find( '.congrats-msg span' );
 		this.imc         = IMC.LocalStorage.imc();
-		this.url         = container.data( 'action-test' );
 		this.init();
 
 	};
 
 	ResultTest.fn.init = function() {
 		if( null == this.imc ) {
+			window.alert( 'Desculpe, não foi possível obter seu IMC.');
 			this.locationTest();
 			return;
 		} else if( this.imc < 18.5 ) {
@@ -60,7 +60,7 @@ Module( 'IMC.Components.ResultTest', function(ResultTest) {
 	};
 
 	ResultTest.fn.locationTest = function() {
-		window.location.href = this.url;
+		window.location.replace( 'test.html' );
 	};
 
 });
