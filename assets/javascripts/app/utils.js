@@ -39,13 +39,13 @@ Module( 'IMC.Utils', function(Utils) {
 		};
 	};
 
-	Utils.getFormatedDate = function() {
+	Utils.getFormatedDate = function(type) {
 		var dateObject   = Utils.getDateTime()
 		  , dateFormeted = dateObject.date.join( '/' )
 		  , timeFormated = dateObject.time.join( 'h' )
 		;
 
-		return dateFormeted + ' ' + timeFormated;
+		return ( 'date' == type ) ? dateFormeted : timeFormated;
 	};
 
 }, {} );

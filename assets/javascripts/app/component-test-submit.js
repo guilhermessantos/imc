@@ -11,6 +11,7 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 	};
 
 	TestSubmit.fn._onSubmit = function(event) {
+		event.preventDefault();
 		var value            = this.form.serializeObject();
 		this.results.name    = value.name;
 		this.results.weight  = parseFloat( value.weight.replace( ',', '.' ) );
@@ -61,12 +62,14 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 	};
 
 	TestSubmit.fn.storeResult = function(imc) {
-		this.results.imc  = imc;
-		this.results.date = IMC.Utils.getFormatedDate();
-		this.results.time = IMC.Utils.getTime();
+		this.results.imc   = imc;
+		this.results.date  = IMC.Utils.getFormatedDate( 'date' );
+		this.results.hours = IMC.Utils.getFormatedDate( 'hours' );
+		this.results.time  = IMC.Utils.getTime();
 		localStorage.setItem( 'imcKeywords', this.results.search );
 		localStorage.setItem( 'imcValue', imc );
 		IMC.LocalStorage.setItems( this.results );
+		window.location.replace( 'result-test.html' );
 	};
 
 });
