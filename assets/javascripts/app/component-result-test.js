@@ -1,8 +1,8 @@
 Module( 'IMC.Components.ResultTest', function(ResultTest) {
 
-	var DEFAULT_WEIGHT = 'Parabéns, você está na medida certa! Confira seu IMC Abaixo.'
-	  , UNDER_WEIGHT   = 'Opss, você abaixo de seu peso ideal! Confira seu IMC Abaixo.'
-	  , OVER_WEIGHT    = 'Opss, você está acima do seu peso ideal! Confira seu IMC Abaixo'
+	var DEFAULT_WEIGHT = 'Parabéns, você está na medida certa! Confira seu IMC abaixo.'
+	  , UNDER_WEIGHT   = 'Opss, você abaixo de seu peso ideal! Confira seu IMC abaixo.'
+	  , OVER_WEIGHT    = 'Opss, você está acima do seu peso ideal! Confira seu IMC abaixo'
 	  , ICON_HAPPY     = 'icon-smiling'
 	  , ICON_SAD       = 'icon-sad'
 	  , CONGRATS       = 'Continue assim!'
