@@ -39,7 +39,7 @@ Module( 'IMC.CanvasMap', function(CanvasMap) {
 		this.googlePostion = new google.maps.LatLng( this.position.latitude, this.position.longitude );
 		this.mapOptions    = {
 			center      : this.googlePostion,
-			zoom        : 15,
+			zoom        : 14,
 		    mapTypeId   : google.maps.MapTypeId.ROADMAP,
 	    	scrollwheel : false,
 		};
