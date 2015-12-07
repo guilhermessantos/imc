@@ -1,15 +1,24 @@
+@keyframes button {
+	0%,
+	100% {
+		box-shadow: 0 0 20px 5px rgba($colorSecondary, .1),
+					0 0 20px 5px rgba($colorSecondary, .1) inset;
+	}
+	50% {
+		box-shadow: 0 0 20px 5px rgba($colorSecondary, .5),
+					0 0 20px 5px rgba($colorSecondary, .5) inset;
+	}
+}
+
 .home {
-	position: relative;
 
 	.branding,
-	.btn-test,
-	#footer {
+	.btn-test {
 		left: 50%;
 		position: absolute;
 	}
 
-	.branding,
-	#footer {
+	.branding {
 		-webkit-transform: translateX(-50%);
 			-ms-transform: translateX(-50%);
 				transform: translateX(-50%);
@@ -17,18 +26,20 @@
 
 	.branding {
 		top: 20px;
-	}	
+	}
 
 	.btn-test {
 		top: 50%;
-		-webkit-transform: translateY(-50%) translateX(-50%);	
-			-ms-transform: translateY(-50%) translateX(-50%);	
-				transform: translateY(-50%) translateX(-50%);	
+		animation: button 3s infinite;
+		-webkit-transform: translateY(-50%) translateX(-50%);
+			-ms-transform: translateY(-50%) translateX(-50%);
+				transform: translateY(-50%) translateX(-50%);
 	}
 
 	#footer {
 		bottom: 20px;
+		position: absolute;
 		text-align: center;
-		width: 80%;		
+		width: 100%;
 	}
 }

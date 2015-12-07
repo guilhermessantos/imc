@@ -1,0 +1,27 @@
+.navigation {
+    background: rgba($colorPrimary, .7);
+    box-shadow: 0 -20px 10px -15px rgba(#000, .3) inset;
+    font-size: em($fontSizeMedium);
+    text-transform: uppercase;
+
+    li {
+        border-top: 1px solid rgba($colorDetail, .1);
+    }
+
+    a {
+        color: $colorText;
+        display: block;
+        padding: 15px 40px;
+    }
+
+    .link-featured {
+        padding: 20px 40px;
+
+        a {
+            background: $colorSecondary;
+            border-radius: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+}

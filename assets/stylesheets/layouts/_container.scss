@@ -10,10 +10,17 @@
 
 .wrapper {
 	height: 100%;
-	overflow-x: hidden;
+	position: relative;
+	width: 100%;
 
 	.hidden & {
 		overflow: hidden;
+	}
+
+	.navigation {
+		bottom: 100%;
+		position: absolute;
+		width: inherit;
 	}
 }
 
