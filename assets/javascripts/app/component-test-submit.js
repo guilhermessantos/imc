@@ -2,7 +2,6 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 
 	TestSubmit.fn.initialize = function(container) {
 		this.form    = container.find( 'form' );
-		this.url     = this.form.data( 'action' );
 		this.results = {};
 		this.addEventListener();
 	};
@@ -12,7 +11,6 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 	};
 
 	TestSubmit.fn._onSubmit = function(event) {
-		event.preventDefault();
 		var value            = this.form.serializeObject();
 		this.results.name    = value.name;
 		this.results.weight  = parseFloat( value.weight.replace( ',', '.' ) );
@@ -69,7 +67,6 @@ Module( 'IMC.Components.TestSubmit', function(TestSubmit) {
 		localStorage.setItem( 'imcKeywords', this.results.search );
 		localStorage.setItem( 'imcValue', imc );
 		IMC.LocalStorage.setItems( this.results );
-		window.location.href = this.url;
 	};
 
 });

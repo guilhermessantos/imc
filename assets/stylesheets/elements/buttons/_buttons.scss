@@ -2,6 +2,9 @@
 	color: $colorText;
 	text-align: center;
 	text-transform: uppercase;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   		appearance: none;
 }
 
 .btn-test {
