@@ -1,3 +1,30 @@
+body {
+	position: relative;
+	-webkit-transition: transform .5s;
+		-ms-transition: transform .5s;
+			transition: transform .5s;
+
+	.navigation {
+		bottom: 100%;
+		position: absolute;
+		width: 100%;
+	}
+
+	&.active-menu {
+		-webkit-transform: translateY(255px);
+			-ms-transform: translateY(255px);
+				transform: translateY(255px);
+
+		.hamburger {
+			&:before,
+			&:after,
+			.line {
+				background: $colorSecondary;
+			}
+		}
+	}
+}
+
 .branding {
 	display: block;
 	width: 100px;
@@ -15,12 +42,6 @@
 
 	.hidden & {
 		overflow: hidden;
-	}
-
-	.navigation {
-		bottom: 100%;
-		position: absolute;
-		width: inherit;
 	}
 }
 

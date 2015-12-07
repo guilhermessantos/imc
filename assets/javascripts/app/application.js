@@ -6,4 +6,8 @@ Module( 'IMC.Application', function(Application) {
 		IMC.InputMask.create( container.byElement( 'mask' ) );
 	};
 
+	jQuery( '.hamburger' ).on( 'click', function() {
+		jQuery( 'body' ).toggleClass( 'active-menu' );
+	});
+
 }, {} );

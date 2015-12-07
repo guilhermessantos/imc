@@ -1,5 +1,5 @@
 .table-results {
-	
+
 	table {
 		width: 100%;
 	}
@@ -20,6 +20,10 @@
 		&:last-child {
 			text-align: left;
 		}
+
+		&:first-child {
+			padding: 12px 0 12px 15px;
+		}
 	}
 
 	i {
@@ -37,12 +41,13 @@
 	.table-results-data,
 	.table-results-time {
 		display: inline-block;
+		font-size: 10px;
 		opacity: .5;
 		width: 45%;
 	}
 }
 
 .table-results-imc {
-	font-size: em($fontSizeXLarge);
+	font-size: em($fontSizeXLarge - 7px);
 	font-weight: bold;
 }

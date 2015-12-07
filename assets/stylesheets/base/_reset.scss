@@ -61,7 +61,7 @@ button {
 			appearance: value;
 }
 
-:focus { 
+:focus {
 	outline:none;
 }
 
@@ -87,10 +87,11 @@ html {
 }
 
 body {
-	color: $colorText; 
+	color: $colorText;
 	font: $fontSizeDefault/1 $fontPrimary;
 }
 
 * {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
